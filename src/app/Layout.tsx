@@ -5,7 +5,7 @@ import Navbar from "../components/navbar/Navbar";
 
 function Layout() {
   return (
-    <div className="layout">
+    <div className="layout h-dvh">
       <div className="layout__navbar flex items-center justify-center py-5">
         <Navbar />
       </div>
