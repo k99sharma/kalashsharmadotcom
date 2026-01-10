@@ -18,10 +18,10 @@ function Layout() {
 
           <div className="layout__content md:w-7/12 bg-yellow-500">Content</div>
         </div>
-      </div>
 
-      <div className="layout__footer flex items-center justify-center py-5">
-        <Footer />
+        <div className="layout__footer flex items-center justify-center py-5">
+          <Footer />
+        </div>
       </div>
     </div>
   );
