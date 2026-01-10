@@ -1,7 +1,7 @@
 // imports
 
-import Footer from "../components/footer/Footer";
-import Navbar from "../components/navbar/Navbar";
+import Footer from "../components/footer";
+import Navbar from "../components/navbar";
 
 function Layout() {
   return (
