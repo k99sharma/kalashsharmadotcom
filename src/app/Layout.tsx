@@ -1,6 +1,7 @@
 // imports
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
+import Experience from "../components/sections/experience";
 import Header from "../components/sections/header";
 import Projects from "../components/sections/projects";
 
@@ -22,6 +23,10 @@ function Layout() {
 
             <div className="layout__content__projects mb-5">
               <Projects />
+            </div>
+
+            <div className="layout__content__experience mb-5">
+              <Experience />
             </div>
           </div>
         </div>
