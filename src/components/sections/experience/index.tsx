@@ -4,7 +4,7 @@ import experience from "./experience.json";
 
 function Experience() {
   return (
-    <div className="experience">
+    <div className="experience p-3">
       <div className="experience__header mb-8 flex justify-center md:justify-start">
         <CustomHeader heading="2.5 YEARS OF" subheading="EXPERIENCE" />
       </div>
