@@ -1,11 +1,11 @@
 // imports
 import "../styles/globals.css";
-import Page from "./page";
+import Layout from "./Layout";
 
 function App() {
   return (
     <div className="app">
-      <Page />
+      <Layout />
     </div>
   );
 }
