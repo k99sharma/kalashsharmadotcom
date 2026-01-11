@@ -4,6 +4,7 @@ import Navbar from "../components/navbar";
 import Experience from "../components/sections/experience";
 import Header from "../components/sections/header";
 import Projects from "../components/sections/projects";
+import Writings from "../components/sections/writings";
 
 function Layout() {
   return (
@@ -27,6 +28,10 @@ function Layout() {
 
             <div className="layout__content__experience mb-5">
               <Experience />
+            </div>
+
+            <div className="layout__content__writings mb-5">
+              <Writings />
             </div>
           </div>
         </div>
