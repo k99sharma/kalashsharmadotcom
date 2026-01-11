@@ -22,18 +22,18 @@ function Cta() {
           <div className="flex flex-col md:flex-row md:gap-4">
             <div className="cta__form__name w-full md:w-1/2 mb-3">
               <input
-                className="w-full h-10 p-3 bg-neutral-300 rounded-lg"
+                className="w-full h-10 p-3 bg-neutral-700 rounded-lg text-neutral-300"
                 type="text"
-                placeholder="Jon Doe"
+                placeholder="Your Name"
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
 
             <div className="cta__form__email w-full md:w-1/2 mb-3">
               <input
-                className="w-full h-10 p-3 bg-neutral-300 rounded-lg"
+                className="w-full h-10 p-3 bg-neutral-700 rounded-lg text-neutral-300"
                 type="email"
-                placeholder="jondoe@email.com"
+                placeholder="Your@email.com"
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
@@ -41,8 +41,8 @@ function Cta() {
 
           <div className="cta__form__message mb-3">
             <textarea
-              className="w-full h-30 p-3 bg-neutral-300 rounded-lg"
-              placeholder="Your message"
+              className="w-full h-30 p-3 bg-neutral-700 rounded-lg text-neutral-300"
+              placeholder="Message"
               onChange={(e) => setMessage(e.target.value)}
             />
           </div>

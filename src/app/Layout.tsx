@@ -4,6 +4,7 @@ import Navbar from "../components/navbar";
 import Cta from "../components/sections/cta";
 import Experience from "../components/sections/experience";
 import Header from "../components/sections/header";
+import Illustration from "../components/sections/illustration";
 import Projects from "../components/sections/projects";
 import Writings from "../components/sections/writings";
 
@@ -15,8 +16,10 @@ function Layout() {
       </div>
 
       <div className="w-full flex items-center justify-center">
-        <div className="flex flex-col md:flex-row w-full md:w-9/12">
-          <div className="layout__illustration md:w-5/12">Illustration</div>
+        <div className="flex flex-col md:flex-row w-full md:w-10/12">
+          <div className="layout__illustration md:w-5/12">
+            <Illustration />
+          </div>
 
           <div className="layout__content md:w-7/12 overflow-y-auto">
             <div className="layout__content__header mb-5">
