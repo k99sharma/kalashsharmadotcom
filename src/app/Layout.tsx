@@ -9,8 +9,8 @@ import Writings from "../components/sections/writings";
 
 function Layout() {
   return (
-    <div className="layout h-screen poppins-regular">
-      <div className="layout__navbar flex items-center justify-center py-5 my-3">
+    <div className="layout min-h-screen poppins-regular bg-linear-to-r from-neutral-950 to-zinc-950">
+      <div className="layout__navbar flex items-center justify-center py-5 mb-8">
         <Navbar />
       </div>
 

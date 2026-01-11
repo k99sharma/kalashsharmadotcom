@@ -1,32 +1,25 @@
 // imports
-import { CiGlobe, CiMaximize1 } from "react-icons/ci";
 import type { WebLinkPropsType } from "./webLink.types";
 import { isPresent } from "../../../utils/util";
-import type { IconType } from "react-icons";
-import { VscGithubAlt } from "react-icons/vsc";
-
 const LinkButton = ({
   url,
-  icon,
+  label,
 }: {
   url: string | undefined;
-  icon: IconType;
+  label: string;
 }) => {
-  const Icon: IconType = icon;
-
   const handleClick = (url: string) => {
-    window.open(url, "_blank", "noopener,noreferrer");
+    window.open(url, "_blank", "noopener, noreferrer");
   };
 
-  return (
-    <div className="linkButton cursor-pointer mr-3">
-      {url !== undefined && url !== null ? (
-        <div onClick={() => handleClick(url)}>
-          <Icon size={20} />
-        </div>
-      ) : null}
+  return url !== undefined && url !== null ? (
+    <div
+      className="linkButton cursor-pointer mr-3 text-amber-500 underline text-sm"
+      onClick={() => handleClick(url)}
+    >
+      {label}{" "}
     </div>
-  );
+  ) : null;
 };
 
 function WebLink({
@@ -42,21 +35,28 @@ function WebLink({
   const isPeriodPresent: boolean = isPresent(period);
 
   return (
-    <div className="webLink hover:bg-neutral-200 rounded-xl mb-8 flex">
+    <div className="webLink rounded-xl mb-8 flex">
       {isImgPresent ? (
         <div className="webLink__img w-1/6">
-          <img className="h-full" width={200} src={img} alt={header} />
+          <img
+            className="h-full rounded-lg"
+            width={200}
+            src={img}
+            alt={header}
+          />
         </div>
       ) : null}
 
       <div
         className={`webLink__content p-4 ${isImgPresent ? "w-5/6" : "w-full"}`}
       >
-        <div className="webLink__header__header text-2xl font-bold mb-2">
+        <div className="webLink__header__header text-2xl font-bold mb-2 text-neutral-50">
           {header}
         </div>
 
-        <div className="webLink__subheader text-lg">{subheader}</div>
+        <div className="webLink__subheader text-lg text-neutral-400">
+          {subheader}
+        </div>
 
         {isDescriptionPresent ? (
           <div className="webLink__description text-lg text-neutral-600 mb-2">
@@ -71,9 +71,9 @@ function WebLink({
         ) : null}
 
         <div className="webLink__links mt-8">
-          <LinkButton url={url?.github} icon={VscGithubAlt} />
+          <LinkButton url={url?.github} label="GitHub" />
 
-          <LinkButton url={url?.web} icon={CiGlobe} />
+          <LinkButton url={url?.web} label="Web" />
         </div>
       </div>
     </div>

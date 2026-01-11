@@ -49,7 +49,7 @@ function Navbar() {
   ];
 
   return (
-    <div className="navbar flex items-center justify-center bg-neutral-800 px-6 py-4 rounded-2xl">
+    <div className="navbar flex items-center justify-center bg-neutral-900 px-6 py-4 rounded-2xl">
       {navbarLinkList.map((link) => (
         <NavbarButton
           label={link.label}

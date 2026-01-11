@@ -13,11 +13,11 @@ function Cta() {
 
   return (
     <div className="cta p-3">
-      <div className="cta__header mb-8 flex justify-center md:justify-start">
+      <div className="cta__header mb-10 flex justify-center md:justify-start">
         <CustomHeader heading="Let's Work" subheading="Together" />
       </div>
 
-      <div className="cta__form">
+      <div className="cta__form p-3">
         <form onSubmit={handleSubmit} autoComplete="off">
           <div className="flex flex-col md:flex-row md:gap-4">
             <div className="cta__form__name w-full md:w-1/2 mb-3">
@@ -50,7 +50,7 @@ function Cta() {
           <div className="cta__form__button">
             <button
               type="submit"
-              className="w-full bg-amber-700 p-2 rounded-lg text-neutral-50"
+              className="w-full bg-amber-500 p-2 rounded-lg text-neutral-50"
             >
               Submit
             </button>

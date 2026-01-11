@@ -6,7 +6,7 @@ import milestones from "./milestones.json";
 function Milestone({ label, milestone }: MilestoneType) {
   return (
     <div className="milestone">
-      <div className="milestone__number mb-3 font-bold text-3xl lg:text-4xl">
+      <div className="milestone__number mb-3 font-bold text-3xl lg:text-4xl text-neutral-50">
         {`+${milestone}`}
       </div>
 
@@ -24,7 +24,7 @@ function Header() {
         <CustomHeader heading="Software" subheading="Engineer" />
       </div>
 
-      <div className="header__subheader w-full lg:w-8/12 text-sm md:text-lg mb-4 md:mb-6 lg:mb-8 text-neutral-600 text-center md:text-left">
+      <div className="header__subheader w-full lg:w-8/12 text-sm md:text-lg mb-4 md:mb-6 lg:mb-8 text-neutral-500 text-center md:text-left">
         Passionate about building intuitive and engaging user experiences, and
         growing my skills by turning ideas into well-crafted products.
       </div>
