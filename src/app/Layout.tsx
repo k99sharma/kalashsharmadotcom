@@ -1,6 +1,7 @@
 // imports
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
+import Cta from "../components/sections/cta";
 import Experience from "../components/sections/experience";
 import Header from "../components/sections/header";
 import Projects from "../components/sections/projects";
@@ -32,6 +33,10 @@ function Layout() {
 
             <div className="layout__content__writings mb-5">
               <Writings />
+            </div>
+
+            <div className="layout__content__cta mb-5">
+              <Cta />
             </div>
           </div>
         </div>
