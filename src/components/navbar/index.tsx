@@ -1,14 +1,28 @@
 // imports
 import type { IconType } from "react-icons";
-import type { NavbarButtonType } from "./navbar.types";
+import type {
+  NavbarButtonType,
+  NavbarLink,
+  NavbarPropsType,
+} from "./navbar.types";
 import { CiHome, CiFolderOn, CiReceipt, CiEdit, CiSun } from "react-icons/ci";
+import type { RefObject } from "react";
 
-const NavbarButton = ({ label, sectionId, icon }: NavbarButtonType) => {
+const NavbarButton = ({ label, sectionRef, icon }: NavbarButtonType) => {
   const Icon: IconType = icon;
+
+  // scroll handler
+  const handleScroll = (ref: RefObject<HTMLDivElement> | null) => {
+    ref?.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
 
   return (
     <div className="navbarButton flex items-center justify-center mx-3">
       <button
+        onClick={() => handleScroll(sectionRef)}
         className="cursor-pointer relative group"
         aria-label={`${label} navbar button`}
       >
@@ -18,42 +32,42 @@ const NavbarButton = ({ label, sectionId, icon }: NavbarButtonType) => {
   );
 };
 
-function Navbar() {
+function Navbar({ sections }: NavbarPropsType) {
   // navbar links
-  const navbarLinkList: NavbarButtonType[] = [
+  const navbarLinkList: NavbarLink[] = [
     {
-      label: "Home",
-      sectionId: "Home",
+      label: "Header",
+      sectionId: "header",
       icon: CiHome,
     },
     {
       label: "Projects",
-      sectionId: "Projects",
+      sectionId: "projects",
       icon: CiFolderOn,
     },
     {
       label: "Experience",
-      sectionId: "Experience",
+      sectionId: "experience",
       icon: CiReceipt,
     },
     {
       label: "Tools",
-      sectionId: "Tools",
+      sectionId: "skills",
       icon: CiSun,
     },
     {
       label: "Thoughts",
-      sectionId: "Thoughts",
+      sectionId: "writings",
       icon: CiEdit,
     },
   ];
 
   return (
     <div className="navbar flex items-center justify-center bg-neutral-900 px-6 py-4 rounded-2xl">
-      {navbarLinkList.map((link) => (
+      {navbarLinkList.map((link: NavbarLink) => (
         <NavbarButton
           label={link.label}
-          sectionId={link.sectionId}
+          sectionRef={sections[link.sectionId]}
           icon={link.icon}
         />
       ))}

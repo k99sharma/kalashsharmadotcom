@@ -1,4 +1,5 @@
 // imports
+import { useRef } from "react";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import Cta from "../components/sections/cta";
@@ -7,12 +8,22 @@ import Header from "../components/sections/header";
 import Illustration from "../components/sections/illustration";
 import Projects from "../components/sections/projects";
 import Writings from "../components/sections/writings";
+import type { SectionsMap } from "../components/navbar/navbar.types";
 
 function Layout() {
+  // refs for each section in page
+  const sections: SectionsMap = {
+    header: useRef<HTMLDivElement>(null),
+    projects: useRef<HTMLDivElement>(null),
+    skills: useRef<HTMLDivElement>(null),
+    writings: useRef<HTMLDivElement>(null),
+    experience: useRef<HTMLDivElement>(null),
+  };
+
   return (
     <div className="layout min-h-screen poppins-regular bg-linear-to-r from-neutral-950 to-zinc-950">
       <div className="layout__navbar flex items-center justify-center py-5 mb-8">
-        <Navbar />
+        <Navbar sections={sections} />
       </div>
 
       <div className="w-full flex items-center justify-center">
@@ -22,21 +33,33 @@ function Layout() {
           </div>
 
           <div className="layout__content md:w-7/12 overflow-y-auto">
-            <div className="layout__content__header mb-5">
+            <section
+              ref={sections.header}
+              className="layout__content__header mb-5"
+            >
               <Header />
-            </div>
+            </section>
 
-            <div className="layout__content__projects mb-5">
+            <section
+              ref={sections.projects}
+              className="layout__content__projects mb-5"
+            >
               <Projects />
-            </div>
+            </section>
 
-            <div className="layout__content__experience mb-5">
+            <section
+              ref={sections.experience}
+              className="layout__content__experience mb-5"
+            >
               <Experience />
-            </div>
+            </section>
 
-            <div className="layout__content__writings mb-5">
+            <section
+              ref={sections.writings}
+              className="layout__content__writings mb-5"
+            >
               <Writings />
-            </div>
+            </section>
 
             <div className="layout__content__cta mb-5">
               <Cta />
