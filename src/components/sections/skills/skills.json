@@ -1,3 +1,44 @@
 {
-  "skills": []
+  "skills": [
+    {
+      "label": "Java",
+      "imgUrl": "/icons/java.png"
+    },
+    {
+      "label": "Java",
+      "imgUrl": "/icons/js.png"
+    },
+    {
+      "label": "Java",
+      "imgUrl": "/icons/mysql.png"
+    },
+    {
+      "label": "Java",
+      "imgUrl": "/icons/springboot.png"
+    },
+    {
+      "label": "Java",
+      "imgUrl": "/icons/redis.png"
+    },
+    {
+      "label": "Java",
+      "imgUrl": "/icons/kafka.png"
+    },
+    {
+      "label": "Java",
+      "imgUrl": "/icons/docker.png"
+    },
+    {
+      "label": "Java",
+      "imgUrl": "/icons/vscode.png"
+    },
+    {
+      "label": "Java",
+      "imgUrl": "/icons/intellij.png"
+    },
+    {
+      "label": "Java",
+      "imgUrl": "/icons/postman.png"
+    }
+  ]
 }
