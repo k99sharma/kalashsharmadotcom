@@ -36,40 +36,40 @@ function Layout() {
           <div className="layout__content md:w-7/12 overflow-y-auto">
             <section
               ref={sections.header}
-              className="layout__content__header mb-5"
+              className="layout__content__header mb-10"
             >
               <Header />
             </section>
 
             <section
               ref={sections.projects}
-              className="layout__content__projects mb-5"
+              className="layout__content__projects mb-10"
             >
               <Projects />
             </section>
 
             <section
               ref={sections.experience}
-              className="layout__content__experience mb-5"
+              className="layout__content__experience mb-10"
             >
               <Experience />
             </section>
 
             <section
               ref={sections.skills}
-              className="layout__content__skills mb-5"
+              className="layout__content__skills mb-10"
             >
               <Skills />
             </section>
 
             <section
               ref={sections.writings}
-              className="layout__content__writings mb-5"
+              className="layout__content__writings mb-10"
             >
-              <Writings />
+              {/* <Writings /> */}
             </section>
 
-            <div className="layout__content__cta mb-5">
+            <div className="layout__content__cta mb-10">
               <Cta />
             </div>
           </div>
