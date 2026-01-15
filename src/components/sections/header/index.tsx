@@ -25,8 +25,9 @@ function Header() {
       </div>
 
       <div className="header__subheader w-full lg:w-8/12 text-sm md:text-lg mb-4 md:mb-6 lg:mb-8 text-neutral-500 text-center md:text-left">
-        Passionate about building intuitive and engaging user experiences, and
-        growing my skills by turning ideas into well-crafted products.
+        Passionate about crafting intuitive, engaging user experiences and
+        continuously growing by transforming ideas into thoughtfully built
+        products.
       </div>
 
       <div className="header__milestones flex justify-center md:justify-start gap-4">

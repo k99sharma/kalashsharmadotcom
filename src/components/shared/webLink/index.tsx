@@ -35,31 +35,32 @@ function WebLink({
   const isPeriodPresent: boolean = isPresent(period);
 
   return (
-    <div className="webLink rounded-xl mb-8 flex">
+    <div className="webLink rounded-xl mb-10 flex">
       {isImgPresent ? (
-        <div className="webLink__img w-1/6">
+        <div
+          className={`webLink__img flex justify-center mr-2 ${
+            isImgPresent ? "w-1/6" : ""
+          }`}
+        >
           <img
-            className="h-full rounded-lg"
-            width={200}
+            className="rounded-lg w-120 md:w-160 h-25 md:h-35 lg:h-35"
             src={img}
             alt={header}
           />
         </div>
       ) : null}
 
-      <div
-        className={`webLink__content p-4 ${isImgPresent ? "w-5/6" : "w-full"}`}
-      >
+      <div className={`webLink__content px-4 ${isImgPresent ? "w-5/6" : ""}`}>
         <div className="webLink__header__header text-2xl font-bold mb-2 text-neutral-50">
           {header}
         </div>
 
-        <div className="webLink__subheader text-lg text-neutral-400">
+        <div className="webLink__subheader text-md md:text-lg text-neutral-400 mb-2">
           {subheader}
         </div>
 
         {isDescriptionPresent ? (
-          <div className="webLink__description text-lg text-neutral-600 mb-2">
+          <div className="webLink__description text-sm md:text-lg text-neutral-600 mb-2">
             {description}
           </div>
         ) : null}
@@ -70,7 +71,7 @@ function WebLink({
           </div>
         ) : null}
 
-        <div className="webLink__links mt-8">
+        <div className="webLink__links mt-5 flex gap-2">
           <LinkButton url={url?.github} label="GitHub" />
 
           <LinkButton url={url?.web} label="Web" />

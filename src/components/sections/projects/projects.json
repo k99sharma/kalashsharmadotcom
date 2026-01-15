@@ -2,18 +2,13 @@
   "data": [
     {
       "header": "Inferno",
-      "subheader": "Inferno",
+      "subheader": "Chaos Engineering Toolkit for Spring Boot",
       "url": {
-        "web": "https:/juahihuihhu"
+        "web": "https://k99sharma.github.io/inferno/",
+        "github": "https://github.com/k99sharma/inferno"
       },
-      "img": "https://images.unsplash.com/photo-1556742526-795a8eac090e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-    {
-      "header": "Inferno",
-      "subheader": "Inferno",
-      "url": {
-        "web": "https:/juahihuihhu"
-      }
+      "description": "Inferno is a lightweight Java library that allows developers to simulate real-world failures like latency, exceptions, timeouts, CPU spikes, and memory issues directly in their Spring Boot applications.",
+      "img": "/assets/projects/inferno.png"
     }
   ]
 }

@@ -1,12 +1,18 @@
 {
   "data": [
     {
-      "header": "Experience 1",
-      "description": "This si Project description",
-      "period": "July, 2024  -  Present",
-      "url": {
-        "web": "ioariog"
-      }
+      "header": "Accenture, India (Promoted)",
+      "subheader": "Software Engineer",
+      "period": "June, 2025  -  Present",
+      "img": "/assets/company/accenture.png",
+      "description": "Refactored and optimized Spring Boot microservices, reducing response latency by 20% and improving modularity and maintainability. Actively contributed to code reviews and mentored team members to uphold clean coding standards."
+    },
+    {
+      "header": "Accenture, India (Promoted)",
+      "subheader": "Associate Software Engineer",
+      "period": "Oct, 2023  -  May, 2025",
+      "img": "/assets/company/accenture.png",
+      "description": "I migrated a legacy Python application to a scalable Java and MySQL backend, improving overall system performance and reliability. I also designed and optimized modular Spring Boot microservices and collaborated closely with cross-functional teams to ensure smooth feature integration and dependable delivery."
     }
   ]
 }

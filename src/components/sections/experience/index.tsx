@@ -13,9 +13,10 @@ function Experience() {
         {experience.data.map((exp) => (
           <WebLink
             header={exp.header}
+            subheader={exp.subheader}
             description={exp.description}
             period={exp.period}
-            url={exp.url}
+            img={exp.img}
           />
         ))}
       </div>

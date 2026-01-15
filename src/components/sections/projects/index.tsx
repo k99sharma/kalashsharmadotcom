@@ -10,12 +10,13 @@ function Projects() {
         <CustomHeader heading="Recent" subheading="Projects" />
       </div>
 
-      <div className="projects__grid">
+      <div className="projects__grid mt-10">
         {projects.data.map((project) => (
           <WebLink
             header={project.header}
             subheader={project.subheader}
             url={project.url}
+            description={project.description}
             img={project.img}
           />
         ))}
