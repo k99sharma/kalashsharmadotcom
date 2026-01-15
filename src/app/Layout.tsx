@@ -9,6 +9,7 @@ import Illustration from "../components/sections/illustration";
 import Projects from "../components/sections/projects";
 import Writings from "../components/sections/writings";
 import type { SectionsMap } from "../components/navbar/navbar.types";
+import Skills from "../components/sections/skills";
 
 function Layout() {
   // refs for each section in page
@@ -52,6 +53,13 @@ function Layout() {
               className="layout__content__experience mb-5"
             >
               <Experience />
+            </section>
+
+            <section
+              ref={sections.skills}
+              className="layout__content__skills mb-5"
+            >
+              <Skills />
             </section>
 
             <section
