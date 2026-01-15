@@ -1,8 +1,7 @@
 import SocialBar from "../../shared/socialBar";
 
 function Illustration() {
-  const imgUrl: string =
-    "https://plus.unsplash.com/premium_photo-1675435644687-562e8042b9db?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29mZmVlfGVufDB8fDB8fHww";
+  const imgUrl: string = "/assets/profile.jpg";
 
   return (
     <div className="illustration md:h-screen flex items-center justify-center w-full">
@@ -10,7 +9,7 @@ function Illustration() {
         <div className="illustration__content__first">
           <div className="illustration__content__first__img flex items-center justify-center p-3 mb-3">
             <img
-              className="rounded-lg h-60 md:h-80 w-60 md:w-100"
+              className="rounded-lg h-60 md:h-80 w-60 md:w-100 object-cover"
               src={imgUrl}
             />
           </div>
