@@ -1,38 +1,8 @@
-// imports
-import { CiLinkedin, CiReceipt } from "react-icons/ci";
-import { VscGithubAlt } from "react-icons/vsc";
-import type { SocialType } from "./illustration.types";
-import type { IconType } from "react-icons";
-
-const SocialLink = ({ label, icon, url }: SocialType) => {
-  const Icon: IconType = icon;
-
-  const handleClick = () => {};
-
-  return <Icon onClick={() => handleClick()} className="h-7 w-7 mx-3" />;
-};
+import SocialBar from "../../shared/socialBar";
 
 function Illustration() {
   const imgUrl: string =
     "https://plus.unsplash.com/premium_photo-1675435644687-562e8042b9db?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29mZmVlfGVufDB8fDB8fHww";
-
-  const socials: SocialType[] = [
-    {
-      label: "linkedin",
-      icon: CiLinkedin,
-      url: "",
-    },
-    {
-      label: "github",
-      icon: VscGithubAlt,
-      url: "",
-    },
-    {
-      label: "blog",
-      icon: CiReceipt,
-      url: "",
-    },
-  ];
 
   return (
     <div className="illustration md:h-screen flex items-center justify-center w-full">
@@ -56,14 +26,8 @@ function Illustration() {
             solutions.
           </div>
 
-          <div className="illustration__content__second__socials my-5 flex items-center justify-center">
-            {socials.map((social) => (
-              <SocialLink
-                label={social.label}
-                icon={social.icon}
-                url={social.url}
-              />
-            ))}
+          <div className="illustration__content__second__socials my-5">
+            <SocialBar size="large" whiteIcon={false} />
           </div>
         </div>
       </div>

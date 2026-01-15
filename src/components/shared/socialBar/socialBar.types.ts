@@ -4,4 +4,6 @@ export type SocialType = {
   label: string;
   icon: IconType;
   url: string;
+  size?: string;
+  whiteIcon?: boolean;
 };
