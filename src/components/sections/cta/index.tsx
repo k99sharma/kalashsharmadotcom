@@ -50,7 +50,7 @@ function Cta() {
           <div className="cta__form__button">
             <button
               type="submit"
-              className="w-full bg-amber-500 p-2 rounded-lg text-neutral-50"
+              className="w-full bg-amber-400 hover:bg-amber-500 cursor-pointer p-2 rounded-lg text-neutral-50"
             >
               Submit
             </button>

@@ -1,13 +1,18 @@
 // imports
 import type { WebLinkPropsType } from "./webLink.types";
 import { isPresent } from "../../../utils/util";
+import type { IconType } from "react-icons";
+import { FaGithub, FaGlobe } from "react-icons/fa";
 const LinkButton = ({
   url,
-  label,
+  icon,
 }: {
   url: string | undefined;
   label: string;
+  icon: IconType;
 }) => {
+  const Icon: IconType = icon;
+
   const handleClick = (url: string) => {
     window.open(url, "_blank", "noopener, noreferrer");
   };
@@ -17,7 +22,7 @@ const LinkButton = ({
       className="linkButton cursor-pointer mr-3 text-amber-500 underline text-sm"
       onClick={() => handleClick(url)}
     >
-      {label}{" "}
+      <Icon className="h-5 w-5" />
     </div>
   ) : null;
 };
@@ -35,7 +40,7 @@ function WebLink({
   const isPeriodPresent: boolean = isPresent(period);
 
   return (
-    <div className="webLink rounded-xl mb-10 flex">
+    <div className="webLink rounded-2xl mb-10 flex hover:shadow">
       {isImgPresent ? (
         <div
           className={`webLink__img flex justify-center mr-2 ${
@@ -51,10 +56,17 @@ function WebLink({
       ) : null}
 
       <div className={`webLink__content px-4 ${isImgPresent ? "w-5/6" : ""}`}>
-        <div className="webLink__header__header text-2xl font-bold mb-2 text-neutral-50">
-          {header}
-        </div>
-
+        {url ? (
+          <div className="webLink__header__header text-2xl font-bold mb-2 text-neutral-50 hover:underline">
+            <a href={url.github} target="_blank" aria-label={header}>
+              {header}
+            </a>
+          </div>
+        ) : (
+          <div className="webLink__header__header text-2xl font-bold mb-2 text-neutral-50">
+            {header}
+          </div>
+        )}
         <div className="webLink__subheader text-md md:text-lg text-neutral-400 mb-2">
           {subheader}
         </div>
@@ -72,9 +84,9 @@ function WebLink({
         ) : null}
 
         <div className="webLink__links mt-5 flex gap-2">
-          <LinkButton url={url?.github} label="GitHub" />
+          <LinkButton url={url?.github} label="GitHub" icon={FaGithub} />
 
-          <LinkButton url={url?.web} label="Web" />
+          <LinkButton url={url?.web} label="Web" icon={FaGlobe} />
         </div>
       </div>
     </div>
