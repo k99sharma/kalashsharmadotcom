@@ -33,7 +33,7 @@ const Layout = () => {
           <LanguageStack />
         </div>
 
-        <div className="layout__content__pesTab w-full">
+        <div className="layout__content__pesTab w-full md:w-3/5">
           <PesTab />
         </div>
 
