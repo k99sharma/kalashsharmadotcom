@@ -18,5 +18,11 @@
       "label": "Python",
       "icon": "/assets/languages/python.png"
     }
-  ]
+  ],
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/kalashsharma99/",
+    "github": "https://github.com/k99sharma",
+    "blog": "https://kalashsharma.hashnode.dev/",
+    "mail": "mailto:kalash.strt@gmail.com"
+  }
 }

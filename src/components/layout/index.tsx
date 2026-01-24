@@ -3,6 +3,7 @@ import Avatar from "../avatar";
 import HeaderDescription from "../headerDescription";
 import LanguageStack from "../languageStack";
 import Map from "../map";
+import Socials from "../socials";
 
 const Layout = () => {
   return (
@@ -17,11 +18,15 @@ const Layout = () => {
             <Avatar />
           </div>
 
+          <div className="layout__content__header__social my-6">
+            <Socials />
+          </div>
+
           <div className="layout__content__header__description flex items-center justify-center">
             <HeaderDescription />
           </div>
 
-          <div className="layout__content__header__languageStack mt-10 mb-5">
+          <div className="layout__content__header__languageStack my-12">
             <LanguageStack />
           </div>
         </div>
