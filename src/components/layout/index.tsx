@@ -1,5 +1,6 @@
 // imports
 import Avatar from "../avatar";
+import Cta from "../cta";
 import Footer from "../footer";
 import HeaderDescription from "../headerDescription";
 import LanguageStack from "../languageStack";
@@ -33,8 +34,12 @@ const Layout = () => {
           <LanguageStack />
         </div>
 
-        <div className="layout__content__pesTab w-full md:w-4/6">
+        <div className="layout__content__pesTab w-full md:w-4/6 mb-5">
           <PesTab />
+        </div>
+
+        <div className="layout__content__cta mt-10 w-full md:w-5/6 shadow-1 bg-neutral-50 p-4 rounded-xl">
+          <Cta />
         </div>
 
         <div className="layout__content__footer mt-20">
