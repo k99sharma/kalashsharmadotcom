@@ -4,5 +4,19 @@
       "book": "AI Engineering by Chip Huyen",
       "url": "https://www.amazon.in/AI-Engineering-Building-Applications-Foundation/dp/9355426666/ref=sr_1_3?crid=3L4DMIW7YQA9Q&dib=eyJ2IjoiMSJ9.PTsazHtc3DvISpYFeWuQXUeuZMlVlAe_LwD3kyI66KT_0B4CzMtBgRzMDE4BlF6UPm_6RJTjioIrwwfVJfAEl-2kUKLczrPIktzH6e493gIRpyavh2y9AKcKFQJqFASh1eCul5NIIMWsId8xW03xNFUr3mNn5ePz_6kvO3QzM-eNzOn0CZL1oT1oKmfkiQzmVSAAy2kgxqQLr-89EPg7xtFWBmaSwUJlNKf6BKOpc8E.kyTMtu5_hPM-_LgywLGZu4WCrQ72_btuHTZVDd3WoMk&dib_tag=se&keywords=ai+engineering&qid=1769262001&sprefix=ai+en%2Caps%2C366&sr=8-3"
     }
-  }
+  },
+  "languageStack": [
+    {
+      "label": "Java",
+      "icon": "/assets/languages/java.png"
+    },
+    {
+      "label": "TypeScript",
+      "icon": "/assets/languages/typescript.png"
+    },
+    {
+      "label": "Python",
+      "icon": "/assets/languages/python.png"
+    }
+  ]
 }

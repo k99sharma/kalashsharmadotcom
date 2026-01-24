@@ -5,4 +5,10 @@ export type DataType = {
       url: string;
     };
   };
+  languageStack: LanguageType[];
+};
+
+export type LanguageType = {
+  label: string;
+  icon: string;
 };

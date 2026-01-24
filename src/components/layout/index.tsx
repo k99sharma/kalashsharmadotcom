@@ -1,6 +1,7 @@
 // imports
 import Avatar from "../avatar";
 import HeaderDescription from "../headerDescription";
+import LanguageStack from "../languageStack";
 import Map from "../map";
 
 const Layout = () => {
@@ -18,6 +19,10 @@ const Layout = () => {
 
           <div className="layout__content__header__description flex items-center justify-center">
             <HeaderDescription />
+          </div>
+
+          <div className="layout__content__header__languageStack mt-10 mb-5">
+            <LanguageStack />
           </div>
         </div>
       </div>
