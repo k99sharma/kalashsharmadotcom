@@ -25,3 +25,11 @@ export type ProjectType = {
   tech: string[];
   description: string;
 };
+
+export type ExperienceType = {
+  logo: string;
+  designation: string;
+  timeline: string;
+  company: string;
+  description: string[];
+};

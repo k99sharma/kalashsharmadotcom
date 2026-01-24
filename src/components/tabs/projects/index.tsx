@@ -4,7 +4,7 @@ import data from "../../../resources/data.json";
 import LinkButton from "../../shared/LinkButton";
 import { VscGithubAlt } from "react-icons/vsc";
 import { PiEyesLight } from "react-icons/pi";
-import { Flex, Tag } from "antd";
+import { Empty, Flex, Tag } from "antd";
 
 const ProjectCard = ({ project }: { project: ProjectType }) => {
   return (
@@ -66,12 +66,14 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
 const Projects = () => {
   const projects: ProjectType[] = data.projects;
 
-  return (
-    <div className="projects py-2 px-4 bg-neutral-200 rounded-lg grid grid-cols-2 gap-5">
+  return projects !== undefined && projects.length > 0 ? (
+    <div className="projects p-4 bg-neutral-200 rounded-lg grid grid-cols-1 gap-2">
       {projects.map((project) => (
         <ProjectCard key={project.title} project={project} />
       ))}
     </div>
+  ) : (
+    <Empty />
   );
 };
 
