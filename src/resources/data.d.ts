@@ -7,6 +7,8 @@ export type DataType = {
   };
   languageStack: LanguageType[];
   projects: ProjectType[];
+  skills: string[];
+  availableSkills: SkillType[];
 };
 
 export type LanguageType = {
@@ -32,4 +34,9 @@ export type ExperienceType = {
   timeline: string;
   company: string;
   description: string[];
+};
+
+export type SkillType = {
+  label: string;
+  url: string;
 };

@@ -26,5 +26,93 @@
     "mail": "mailto:kalash.strt@gmail.com"
   },
   "projects": [],
-  "experience": []
+  "experience": [],
+  "skills": [
+    "Java",
+    "Javascript",
+    "Typescript",
+    "Microservice",
+    "Maven",
+    "Postman",
+    "VScode",
+    "Intellij",
+    "Kafka",
+    "Docker",
+    "Html",
+    "Css",
+    "Git",
+    "Mysql",
+    "Postgres",
+    "SpringBoot"
+  ],
+  "availableSkills": [
+    {
+      "label": "Java",
+      "url": "/assets/languages/java.png"
+    },
+    {
+      "label": "Javascript",
+      "url": "/assets/languages/js.png"
+    },
+    {
+      "label": "Typescript",
+      "url": "/assets/languages/typescript.png"
+    },
+    {
+      "label": "Python",
+      "url": "/assets/languages/python.png"
+    },
+    {
+      "label": "MySql",
+      "url": "/assets/languages/mysql.png"
+    },
+    {
+      "label": "Html",
+      "url": "/assets/languages/html.png"
+    },
+    {
+      "label": "Css",
+      "url": "/assets/languages/css.png"
+    },
+    {
+      "label": "Git",
+      "url": "/assets/languages/git.png"
+    },
+    {
+      "label": "Docker",
+      "url": "/assets/languages/docker.png"
+    },
+    {
+      "label": "Postgres",
+      "url": "/assets/languages/postgres.png"
+    },
+    {
+      "label": "Maven",
+      "url": "/assets/languages/maven.png"
+    },
+    {
+      "label": "Postman",
+      "url": "/assets/languages/postman.png"
+    },
+    {
+      "label": "Microservice",
+      "url": "/assets/languages/microservice.png"
+    },
+    {
+      "label": "Kafka",
+      "url": "/assets/languages/kafka.png"
+    },
+    {
+      "label": "VScode",
+      "url": "/assets/languages/vscode.png"
+    },
+    {
+      "label": "Intellij",
+      "url": "/assets/languages/intellij.png"
+    },
+    {
+      "label": "SpringBoot",
+      "url": "/assets/languages/springboot.png"
+    }
+  ]
 }
