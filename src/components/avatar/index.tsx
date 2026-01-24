@@ -9,6 +9,7 @@ const Avatar = () => {
           src={imgSrc}
           alt="logo"
           aria-label="logo"
+          loading="lazy"
         />
       </div>
 

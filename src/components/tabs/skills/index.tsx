@@ -15,7 +15,13 @@ const SkillBlock = ({
   return (
     <Tooltip title={label}>
       <div className="skillBlock bg-neutral-50 flex items-center justify-center p-3 rounded-lg shadow-1">
-        <img className="h-10 w-10" src={url} alt={label} aria-label={label} />
+        <img
+          className="h-10 w-10"
+          src={url}
+          alt={label}
+          aria-label={label}
+          loading="lazy"
+        />
       </div>
     </Tooltip>
   );

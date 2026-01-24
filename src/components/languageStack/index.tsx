@@ -11,6 +11,7 @@ const LanguageTile = ({ label, icon }: LanguageType) => {
           src={icon}
           alt={`${label} icon`}
           aria-label={label}
+          loading="lazy"
         />
       </div>
 
