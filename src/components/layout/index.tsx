@@ -4,6 +4,7 @@ import Footer from "../footer";
 import HeaderDescription from "../headerDescription";
 import LanguageStack from "../languageStack";
 import Map from "../map";
+import PesTab from "../pesTab";
 import Socials from "../socials";
 
 const Layout = () => {
@@ -30,6 +31,10 @@ const Layout = () => {
 
         <div className="layout__content__languageStack my-12">
           <LanguageStack />
+        </div>
+
+        <div className="layout__content__pesTab w-full">
+          <PesTab />
         </div>
 
         <div className="layout__content__footer mt-8">
