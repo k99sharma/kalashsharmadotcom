@@ -8,7 +8,7 @@ import { Flex, Tag } from "antd";
 
 const ProjectCard = ({ project }: { project: ProjectType }) => {
   return (
-    <div className="projectCard shadow-1 bg-neutral-50 p-4 rounded-lg my-5">
+    <div className="projectCard shadow-1 bg-neutral-50 p-4 rounded-lg">
       <div className="projectCard__img mb-5">
         <img
           className="h-40 w-full rounded-lg"
@@ -22,13 +22,13 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
         {project.title}
       </div>
 
-      <div className="projectCard__subtitle text-md">{project.subtitle}</div>
+      <div className="projectCard__subtitle text-sm">{project.subtitle}</div>
 
       <div className="projectCard__tech my-3">
         <Flex gap="small" align="center" wrap>
           {project.tech.map((tech) => (
             <div className="tag">
-              <Tag variant="filled" color={"volcano"} key={tech}>
+              <Tag variant="filled" color={"blue"} key={tech}>
                 {tech}
               </Tag>
             </div>
@@ -67,7 +67,7 @@ const Projects = () => {
   const projects: ProjectType[] = data.projects;
 
   return (
-    <div className="projects py-2 px-4 bg-neutral-200 rounded-lg">
+    <div className="projects py-2 px-4 bg-neutral-200 rounded-lg grid grid-cols-2 gap-5">
       {projects.map((project) => (
         <ProjectCard key={project.title} project={project} />
       ))}
