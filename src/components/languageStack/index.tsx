@@ -27,7 +27,7 @@ const LanguageStack = () => {
   return (
     <div className="languageStack flex items-center justify-center">
       {languages.map((language: LanguageType) => (
-        <LanguageTile {...language} />
+        <LanguageTile key={language.label} {...language} />
       ))}
     </div>
   );
