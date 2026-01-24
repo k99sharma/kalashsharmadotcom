@@ -36,8 +36,8 @@ const Cta = () => {
       onFinishFailed={onFinishFailed}
       autoComplete="off"
     >
-      <div className="cta p-3 flex w-full">
-        <div className="w-2/5">
+      <div className="cta p-3 flex flex-col md:flex-row w-full">
+        <div className="w-full md:w-2/5">
           <div className="cta__header flex justify-start items-center mb-3">
             <div className="cta__header__logo">
               <FiMessageCircle className="h-5 w-5" />
@@ -52,7 +52,7 @@ const Cta = () => {
             Prefer to send a direct message?
           </div>
 
-          <div className="cta__submit">
+          <div className="cta__submit hidden md:block">
             <Form.Item label={null}>
               <Button
                 variant="solid"
@@ -66,7 +66,7 @@ const Cta = () => {
           </div>
         </div>
 
-        <div className="w-3/5">
+        <div className="w-full md:w-3/5">
           <div className="cta__form__name mb-2">
             <Form.Item<FieldType>
               name="name"
@@ -92,6 +92,19 @@ const Cta = () => {
                 rows={4}
                 allowClear
               />
+            </Form.Item>
+          </div>
+
+          <div className="cta__submit">
+            <Form.Item label={null}>
+              <Button
+                variant="solid"
+                color="default"
+                icon={<TbMessageCircleFilled />}
+                htmlType="submit"
+              >
+                Send Message
+              </Button>
             </Form.Item>
           </div>
         </div>

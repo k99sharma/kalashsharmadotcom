@@ -7,7 +7,7 @@ const HeaderDescription = () => {
   const bookLink: string = data.header.description.url;
 
   return (
-    <div className="headerDescription text-sm text-neutral-500">
+    <div className="headerDescription text-xs md:text-sm text-neutral-500">
       <div className="headerDescription__introduction text-center mb-3">
         I’m a Software Engineer at{" "}
         <span>
