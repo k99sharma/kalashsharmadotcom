@@ -1,5 +1,10 @@
+// imports
+import data from "../../resources/data.json";
+
 const HeaderDescription = () => {
   const accentureLink: string = "https://www.accenture.com/in-en";
+  const bookLabel: string = data.header.description.book;
+  const bookLink: string = data.header.description.url;
 
   return (
     <div className="headerDescription text-sm text-neutral-500">
@@ -21,7 +26,17 @@ const HeaderDescription = () => {
       </div>
 
       <div className="headerDescription__reading text-center">
-        Currently reading AI Engineering by Chip Huyen
+        Currently reading{" "}
+        <span>
+          <a
+            className="hover:underline"
+            href={bookLink}
+            target="_blank"
+            aria-label="AI Engineering book amazon link"
+          >
+            {bookLabel}
+          </a>
+        </span>
       </div>
     </div>
   );
