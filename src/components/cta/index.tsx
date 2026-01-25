@@ -13,12 +13,27 @@ type FieldType = {
 const Cta = () => {
   const [form] = useForm();
 
-  const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
-    console.log("Success:", values);
+  const onFinish: FormProps<FieldType>["onFinish"] = async (values) => {
+    try {
+      const formData = new FormData();
+      formData.append("form-name", "cta");
 
-    message.success("Message Sent!");
+      Object.entries(values).forEach(([key, value]) => {
+        formData.append(key, String(value));
+      });
 
-    form.resetFields();
+      await fetch("/", {
+        method: "POST",
+        body: formData,
+      });
+
+      message.success("Message Sent!");
+
+      form.resetFields();
+    } catch (error) {
+      message.error("Something went wrong. Please try again.");
+      console.error(error);
+    }
   };
 
   const onFinishFailed: FormProps<FieldType>["onFinishFailed"] = (
@@ -35,7 +50,13 @@ const Cta = () => {
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
       autoComplete="off"
+      method="POST"
+      netlify-honeypot="bot-field"
     >
+      {/* Required for Netlify */}
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="bot-field" />
+
       <div className="cta p-3 flex flex-col md:flex-row w-full">
         <div className="w-full md:w-2/5">
           <div className="cta__header flex justify-start items-center mb-3">
