@@ -95,7 +95,7 @@ const Cta = () => {
             </Form.Item>
           </div>
 
-          <div className="cta__submit">
+          <div className="cta__submit md:hidden">
             <Form.Item label={null}>
               <Button
                 variant="solid"
