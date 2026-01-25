@@ -36,7 +36,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
         </Flex>
       </div>
 
-      <div className="projectCard__description text-neutral-600 mb-5">
+      <div className="projectCard__description text-neutral-700 mb-5">
         {project.description}
       </div>
 

@@ -45,7 +45,7 @@ const Skills = () => {
   return skills !== undefined && skills.length > 0 ? (
     <div className="skills p-4 bg-neutral-200 rounded-lg grid grid-cols-4 gap-4 lg:grid-cols-5">
       {skills.map((skill: string) => (
-        <SkillBlock label={skill} skillMap={getSkillIconMap()} />
+        <SkillBlock key={skill} label={skill} skillMap={getSkillIconMap()} />
       ))}
     </div>
   ) : (
