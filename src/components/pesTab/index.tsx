@@ -8,13 +8,18 @@ import Skills from "../tabs/skills";
 const PesTabView = ({ tabs }: { tabs: PesTabType[] }) => {
   return (
     <div className="tabs">
-      <Tabs defaultActiveKey="projects" centered items={tabs} />
+      <Tabs defaultActiveKey="skills" centered items={tabs} />
     </div>
   );
 };
 
 const PesTab = () => {
   const tabInfo: PesTabType[] = [
+    {
+      label: "Skills",
+      key: "skills",
+      children: <Skills />,
+    },
     {
       label: "Projects",
       key: "projects",
@@ -24,11 +29,6 @@ const PesTab = () => {
       label: "Experience",
       key: "experience",
       children: <Experience />,
-    },
-    {
-      label: "Skills",
-      key: "skills",
-      children: <Skills />,
     },
   ];
 
