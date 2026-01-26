@@ -17,7 +17,7 @@ const Avatar = () => {
         Kalash Sharma
       </div>
 
-      <div className="avatar__subheader font-semibold text-md md:text-lg">
+      <div className="avatar__subheader font-semibold text-sm md:text-md md:text-lg">
         Software Engineer and Learning Applied AI
       </div>
     </div>

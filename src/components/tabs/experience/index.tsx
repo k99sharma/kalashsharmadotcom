@@ -25,7 +25,7 @@ const ExperienceCard = ({ exp }: { exp: ExperienceType }) => {
         </div>
       </div>
 
-      <div className="experienceCard__description text-sm text-neutral-600">
+      <div className="experienceCard__description text-sm text-neutral-700">
         {exp.description.map((d, idx) => (
           <p key={idx}>• {d}</p>
         ))}

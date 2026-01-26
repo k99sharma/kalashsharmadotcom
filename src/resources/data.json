@@ -25,8 +25,33 @@
     "blog": "https://kalashsharma.hashnode.dev/",
     "mail": "mailto:kalash.strt@gmail.com"
   },
-  "projects": [],
-  "experience": [],
+  "projects": [
+    {
+      "title": "Inferno",
+      "subtitle": "Chaos Engineering Toolkit for Spring Boot",
+      "img": "/assets/projects/inferno.png",
+      "description": "Inferno is a lightweight Java library that allows developers to simulate real-world failures like latency, exceptions, timeouts, CPU spikes, and memory issues directly in their Spring Boot applications — without external config or agents.",
+      "tech": ["Java", "Spring Boot", "Spring AOP", "Chaos Engineering"],
+      "url": {
+        "github": "https://github.com/k99sharma/inferno",
+        "preview": "https://k99sharma.github.io/inferno/"
+      }
+    }
+  ],
+  "experience": [
+    {
+      "logo": "/assets/company/accenture.png",
+      "designation": "Software Engineer",
+      "timeline": "Sept 2023 - Present",
+      "company": "Accenture",
+      "description": [
+        "Migrated an internal Python application to a server-rendered Java backend using Spring Boot and MySQL.",
+        "Built and enhanced modular Spring Boot microservices, focusing on clean architecture and maintainability.",
+        "Developed reusable UI integrations and filter-driven dashboards with interactive charts for business reporting.",
+        "Collaborated with frontend and QA teams through code reviews and feature alignment to ensure smooth integrations."
+      ]
+    }
+  ],
   "skills": [
     "Java",
     "Javascript",
