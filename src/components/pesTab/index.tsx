@@ -4,6 +4,7 @@ import type { PesTabType } from "./pesTab";
 import Experience from "../tabs/experience/index";
 import Projects from "../tabs/projects";
 import Skills from "../tabs/skills";
+import AIMvps from "../tabs/aimvps";
 
 const PesTabView = ({ tabs }: { tabs: PesTabType[] }) => {
   return (
@@ -24,6 +25,11 @@ const PesTab = () => {
       label: "Projects",
       key: "projects",
       children: <Projects />,
+    },
+    {
+      label: "AI MVPs",
+      key: "aimvps",
+      children: <AIMvps />,
     },
     {
       label: "Experience",

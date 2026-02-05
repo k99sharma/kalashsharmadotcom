@@ -38,6 +38,19 @@
       }
     }
   ],
+  "aimvps": [
+    {
+      "title": "Support Triage Assistant",
+      "subtitle": "AI-assisted support triage for consistent and scalable customer service decisions",
+      "img": "/assets/projects/support_assistant.png",
+      "description": "A decision-support tool that analyzes customer complaints using a combination of AI-driven reasoning and deterministic rules to classify issue type, assess urgency, detect customer tone, and suggest realistic next actions for first-level support agents. Built using Lovable with a focus on reliability, conservative escalation, and real-world support workflows.",
+      "tech": ["Prompt Engineering", "Lovable", "Customer Service"],
+      "url": {
+        "github": "https://supporttriageassistant.lovable.app/",
+        "preview": "https://supporttriageassistant.lovable.app/"
+      }
+    }
+  ],
   "experience": [
     {
       "logo": "/assets/company/accenture.png",
