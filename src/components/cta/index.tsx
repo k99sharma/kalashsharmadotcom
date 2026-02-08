@@ -27,6 +27,7 @@ const Cta = () => {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: formData.toString(),
       });
+      console.log(response);
 
       if (!response.ok) throw new Error("Form submission failed");
 
@@ -40,13 +41,6 @@ const Cta = () => {
 
   return (
     <>
-      {/* Hidden form for Netlify detection */}
-      <form name="cta" data-netlify="true" hidden>
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <textarea name="message"></textarea>
-      </form>
-
       <Form form={form} name="cta" onFinish={onFinish}>
         <div className="cta p-3 flex flex-col md:flex-row w-full">
           <div className="w-full md:w-2/5">
