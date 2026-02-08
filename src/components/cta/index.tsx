@@ -15,24 +15,34 @@ const Cta = () => {
 
   const onFinish: FormProps<FieldType>["onFinish"] = async (values) => {
     try {
-      const formData = new FormData();
-      formData.append("form-name", "cta");
+      const encode = (data: Record<string, string>) => {
+        return Object.keys(data)
+          .map(
+            (key) =>
+              encodeURIComponent(key) + "=" + encodeURIComponent(data[key]),
+          )
+          .join("&");
+      };
 
-      Object.entries(values).forEach(([key, value]) => {
-        formData.append(key, String(value));
-      });
-
-      const response = await fetch("/", {
+      const response = await fetch("https://kalashsharma.com/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: formData.toString(),
+        body: encode({
+          "form-name": "cta",
+          name: values.name,
+          email: values.email,
+          message: values.message,
+        }),
       });
-      console.log(response);
 
-      if (!response.ok) throw new Error("Form submission failed");
+      console.log("Response:", response.status, await response.text());
 
-      message.success("Message Sent!");
-      form.resetFields();
+      if (response.ok) {
+        message.success("Message Sent!");
+        form.resetFields();
+      } else {
+        throw new Error(`Status: ${response.status}`);
+      }
     } catch (error) {
       message.error("Something went wrong. Please try again.");
       console.error(error);
