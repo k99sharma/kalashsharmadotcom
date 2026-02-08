@@ -35,8 +35,6 @@ const Cta = () => {
         }),
       });
 
-      console.log("Response:", response.status, await response.text());
-
       if (response.ok) {
         message.success("Message Sent!");
         form.resetFields();
