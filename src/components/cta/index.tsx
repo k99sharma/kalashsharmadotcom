@@ -1,4 +1,3 @@
-// imports
 import { Button, Form, Input, message, type FormProps } from "antd";
 import { useForm } from "antd/es/form/Form";
 import TextArea from "antd/es/input/TextArea";
@@ -7,6 +6,7 @@ import { TbMessageCircleFilled } from "react-icons/tb";
 
 type FieldType = {
   name: string;
+  email: string;
   message: string;
 };
 
@@ -22,13 +22,15 @@ const Cta = () => {
         formData.append(key, String(value));
       });
 
-      await fetch("/", {
+      const response = await fetch("/", {
         method: "POST",
-        body: formData,
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formData.toString(),
       });
 
-      message.success("Message Sent!");
+      if (!response.ok) throw new Error("Form submission failed");
 
+      message.success("Message Sent!");
       form.resetFields();
     } catch (error) {
       message.error("Something went wrong. Please try again.");
@@ -36,102 +38,91 @@ const Cta = () => {
     }
   };
 
-  const onFinishFailed: FormProps<FieldType>["onFinishFailed"] = (
-    errorInfo,
-  ) => {
-    message.error("Failed to sent message!");
-    console.log(errorInfo.message);
-  };
-
   return (
-    <Form
-      form={form}
-      name="cta"
-      onFinish={onFinish}
-      onFinishFailed={onFinishFailed}
-      autoComplete="off"
-      method="POST"
-      netlify-honeypot="bot-field"
-      data-netlify={true}
-    >
-      {/* Required for Netlify */}
-      <input type="hidden" name="form-name" value="contact" />
-      <input type="hidden" name="bot-field" />
+    <>
+      {/* Hidden form for Netlify detection */}
+      <form name="cta" data-netlify="true" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <textarea name="message"></textarea>
+      </form>
 
-      <div className="cta p-3 flex flex-col md:flex-row w-full">
-        <div className="w-full md:w-2/5">
-          <div className="cta__header flex justify-start items-center mb-3">
-            <div className="cta__header__logo">
+      <Form form={form} name="cta" onFinish={onFinish}>
+        <div className="cta p-3 flex flex-col md:flex-row w-full">
+          <div className="w-full md:w-2/5">
+            <div className="cta__header flex justify-start items-center mb-3">
               <FiMessageCircle className="h-5 w-5" />
+              <div className="cta__header__title text-sm ml-2 font-semibold">
+                Quick Message
+              </div>
             </div>
 
-            <div className="cta__header__title text-sm ml-2 font-semibold">
-              Quick Message
+            <div className="cta__subheader text-sm text-neutral-600 mb-5">
+              Prefer to send a direct message?
+            </div>
+
+            <div className="cta__submit hidden md:block">
+              <Form.Item>
+                <Button
+                  variant="solid"
+                  color="default"
+                  icon={<TbMessageCircleFilled />}
+                  htmlType="submit"
+                >
+                  Send Message
+                </Button>
+              </Form.Item>
             </div>
           </div>
 
-          <div className="cta__subheader text-sm text-neutral-600 mb-5">
-            Prefer to send a direct message?
-          </div>
-
-          <div className="cta__submit hidden md:block">
-            <Form.Item label={null}>
-              <Button
-                variant="solid"
-                color="default"
-                icon={<TbMessageCircleFilled />}
-                htmlType="submit"
-              >
-                Send Message
-              </Button>
-            </Form.Item>
-          </div>
-        </div>
-
-        <div className="w-full md:w-3/5">
-          <div className="cta__form__name mb-2">
+          <div className="w-full md:w-3/5">
             <Form.Item<FieldType>
               name="name"
-              rules={[{ required: true, message: "Name is mandatory field." }]}
+              rules={[{ required: true, message: "Name is required" }]}
+              className="mb-2"
             >
-              <Input type="text" placeholder="Your name" />
+              <Input placeholder="Your name" />
             </Form.Item>
-          </div>
 
-          <div className="cta__form__message">
+            <Form.Item<FieldType>
+              name="email"
+              rules={[
+                { required: true, message: "Email is required" },
+                { type: "email", message: "Please enter a valid email" },
+              ]}
+              className="mb-2"
+            >
+              <Input placeholder="yourmail@email.com" />
+            </Form.Item>
+
             <Form.Item<FieldType>
               name="message"
-              rules={[
-                { required: true, message: "Message is mandatory field." },
-              ]}
+              rules={[{ required: true, message: "Message is required" }]}
             >
               <TextArea
                 placeholder="Your message"
-                count={{
-                  show: true,
-                  max: 500,
-                }}
+                count={{ show: true, max: 500 }}
                 rows={4}
                 allowClear
               />
             </Form.Item>
-          </div>
 
-          <div className="cta__submit md:hidden">
-            <Form.Item label={null}>
-              <Button
-                variant="solid"
-                color="default"
-                icon={<TbMessageCircleFilled />}
-                htmlType="submit"
-              >
-                Send Message
-              </Button>
-            </Form.Item>
+            <div className="cta__submit md:hidden">
+              <Form.Item>
+                <Button
+                  variant="solid"
+                  color="default"
+                  icon={<TbMessageCircleFilled />}
+                  htmlType="submit"
+                >
+                  Send Message
+                </Button>
+              </Form.Item>
+            </div>
           </div>
         </div>
-      </div>
-    </Form>
+      </Form>
+    </>
   );
 };
 
