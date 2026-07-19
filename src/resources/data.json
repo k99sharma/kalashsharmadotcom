@@ -1,8 +1,8 @@
 {
   "header": {
     "description": {
-      "book": "AI Engineering by Chip Huyen",
-      "url": "https://www.amazon.in/AI-Engineering-Building-Applications-Foundation/dp/9355426666/ref=sr_1_3?crid=3L4DMIW7YQA9Q&dib=eyJ2IjoiMSJ9.PTsazHtc3DvISpYFeWuQXUeuZMlVlAe_LwD3kyI66KT_0B4CzMtBgRzMDE4BlF6UPm_6RJTjioIrwwfVJfAEl-2kUKLczrPIktzH6e493gIRpyavh2y9AKcKFQJqFASh1eCul5NIIMWsId8xW03xNFUr3mNn5ePz_6kvO3QzM-eNzOn0CZL1oT1oKmfkiQzmVSAAy2kgxqQLr-89EPg7xtFWBmaSwUJlNKf6BKOpc8E.kyTMtu5_hPM-_LgywLGZu4WCrQ72_btuHTZVDd3WoMk&dib_tag=se&keywords=ai+engineering&qid=1769262001&sprefix=ai+en%2Caps%2C366&sr=8-3"
+      "book": "Designing Data-Intensive Applications by Martin Kleppmann",
+      "url": "https://www.amazon.in/Designing-Data-Intensive-Applications-Maintainable-Greyscale-dp-9368089043/dp/9368089043/ref=dp_ob_title_bk"
     }
   },
   "languageStack": [
@@ -20,8 +20,8 @@
     }
   ],
   "social": {
-    "linkedin": "https://www.linkedin.com/in/kalashsharma99/",
-    "github": "https://github.com/k99sharma",
+    "linkedin": "https://www.linkedin.com/in/imkalashsharma/",
+    "github": "https://github.com/imkalashsharma",
     "blog": "https://kalashsharma.hashnode.dev/",
     "mail": "mailto:kalash.strt@gmail.com"
   },
@@ -33,8 +33,8 @@
       "description": "Inferno is a lightweight Java library that allows developers to simulate real-world failures like latency, exceptions, timeouts, CPU spikes, and memory issues directly in their Spring Boot applications — without external config or agents.",
       "tech": ["Java", "Spring Boot", "Spring AOP", "Chaos Engineering"],
       "url": {
-        "github": "https://github.com/k99sharma/inferno",
-        "preview": "https://k99sharma.github.io/inferno/"
+        "github": "https://github.com/imkalashsharma/inferno",
+        "preview": "https://imkalashsharma.github.io/inferno/"
       }
     }
   ],
@@ -58,30 +58,32 @@
       "timeline": "Sept 2023 - Present",
       "company": "Accenture",
       "description": [
-        "Migrated an internal Python application to a server-rendered Java backend using Spring Boot and MySQL.",
-        "Built and enhanced modular Spring Boot microservices, focusing on clean architecture and maintainability.",
-        "Developed reusable UI integrations and filter-driven dashboards with interactive charts for business reporting.",
-        "Collaborated with frontend and QA teams through code reviews and feature alignment to ensure smooth integrations."
+        "Migrated an internal Python application to Spring Boot and MySQL, improving system efficiency by 30%.",
+        "Built and enhanced Spring Boot microservices, optimizing backend logic and SQL queries to reduce response times by 35%.",
+        "Developed reusable UI components and interactive dashboards for configurable business reporting.",
+        "Collaborated with frontend and QA teams to deliver production-ready features and seamless integrations."
       ]
     }
   ],
   "skills": [
     "Java",
-    "Javascript",
-    "Typescript",
+    "SpringBoot",
     "Microservice",
-    "Maven",
-    "Postman",
-    "VScode",
-    "Intellij",
+    "JavaScript",
+    "TypeScript",
+    "Reactjs",
+    "Postgres",
+    "MySQL",
+    "Redis",
     "Kafka",
     "Docker",
-    "Html",
-    "Css",
+    "AWS",
+    "Python",
     "Git",
-    "Mysql",
-    "Postgres",
-    "SpringBoot"
+    "Maven",
+    "Postman",
+    "HTML",
+    "CSS"
   ],
   "availableSkills": [
     {
@@ -93,12 +95,24 @@
       "url": "/assets/languages/js.png"
     },
     {
+      "label": "Redis",
+      "url": "/assets/languages/redis.png"
+    },
+    {
+      "label": "Aws",
+      "url": "/assets/languages/aws.svg"
+    },
+    {
       "label": "Typescript",
       "url": "/assets/languages/typescript.png"
     },
     {
       "label": "Python",
       "url": "/assets/languages/python.png"
+    },
+    {
+      "label": "Reactjs",
+      "url": "/assets/languages/reactjs.png"
     },
     {
       "label": "MySql",

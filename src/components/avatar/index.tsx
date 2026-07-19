@@ -18,7 +18,7 @@ const Avatar = () => {
       </div>
 
       <div className="avatar__subheader font-semibold text-sm md:text-md md:text-lg">
-        Software Engineer and Learning Applied AI
+        Software Engineer • Learning Applied AI
       </div>
     </div>
   );
