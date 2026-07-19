@@ -9,9 +9,9 @@ import { Empty, Flex, Tag } from "antd";
 const ProjectCard = ({ project }: { project: ProjectType }) => {
   return (
     <div className="projectCard shadow-1 bg-neutral-50 p-4 rounded-lg">
-      <div className="projectCard__img mb-5">
+      <div className="projectCard__img mb-5 items-center justify-center flex">
         <img
-          className="h-40 w-full rounded-lg"
+          className="h-40 w-2/4 rounded-lg"
           src={project.img}
           alt={`${project.title} image`}
           aria-label={`${project.title} image`}

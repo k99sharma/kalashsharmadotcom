@@ -22,13 +22,13 @@ const PesTab = () => {
       children: <Skills />,
     },
     {
-      label: "Projects",
-      key: "projects",
+      label: "Products",
+      key: "products",
       children: <Projects />,
     },
     {
-      label: "AI MVPs",
-      key: "aimvps",
+      label: "AI Builds",
+      key: "aibuilds",
       children: <AIMvps />,
     },
     {
